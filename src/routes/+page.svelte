@@ -1,0 +1,48 @@
+<script>
+	import hsk1 from '../data/hsk1.js';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		console.log(hsk1[1]);
+	});
+</script>
+
+<div class="container">
+	<h1>Welcome to fake Anki!</h1>
+	<a href="/cards"> Start learning</a>
+</div>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		background-color: #007bff;
+		color: white;
+		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 20px;
+		}
+
+		button {
+			padding: 10px 15px;
+		}
+	}
+</style>
