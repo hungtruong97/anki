@@ -8,7 +8,7 @@
 </script>
 
 <div class="container">
-	<h1>Welcome to fake Anki!</h1>
+	<h1>Welcome to Anki!</h1>
 	<a href="/cards"> Start learning</a>
 </div>
 
@@ -18,6 +18,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		height: 100vh;
 	}
 
@@ -39,10 +40,6 @@
 	@media (max-width: 768px) {
 		.container {
 			padding: 0 20px;
-		}
-
-		button {
-			padding: 10px 15px;
 		}
 	}
 </style>
