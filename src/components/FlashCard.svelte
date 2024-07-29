@@ -1,50 +1,29 @@
 <script>
-	import { onMount } from 'svelte';
-	export let cards = [];
-	let flashcard;
+	export let card;
 	let flipped = false;
 
 	function flipCard() {
 		flipped = !flipped;
 	}
-
-	async function loadRandomCard() {
-		if (cards.length === 0) {
-			await new Promise((resolve) => setTimeout(resolve, 100));
-			if (cards.length === 0) {
-				return;
-			}
-		}
-		const randomIndex = Math.floor(Math.random() * cards.length);
-		flashcard = { ...cards[randomIndex].card };
-		flipped = false;
-		console.log(flashcard);
-	}
-
-	onMount(() => {
-		loadRandomCard();
-		console.log(flashcard);
-	});
 </script>
 
 <div class="container">
 	<button class="card" on:click={flipCard}>
 		<div class="card-inner" style="transform: rotateY({flipped ? 180 : 0}deg);">
 			<div class="card-front">
-				{#if flashcard}
-					<p>{flashcard.frontCard.kanji}</p>
-					<p>{flashcard.frontCard.pronunciation}</p>
+				{#if card}
+					<p>{card.frontLine1}</p>
+					<p>{card.frontLine2}</p>
 				{/if}
 			</div>
 			<div class="card-back">
-				{#if flashcard}
-					<p>{flashcard.backCard.meaningEN}</p>
-					<p>{flashcard.backCard.meaningVN}</p>
+				{#if card}
+					<p>{card.backLine1}</p>
+					<p>{card.backLine2}</p>
 				{/if}
 			</div>
 		</div>
 	</button>
-	<button class="random" on:click={loadRandomCard}>Random</button>
 </div>
 
 <style>
@@ -53,7 +32,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100vh;
 		flex-direction: column;
 		gap: 20px;
 	}
@@ -97,27 +75,12 @@
 		transform: rotateY(180deg);
 	}
 
-	.random {
-		padding: 10px 20px;
-		font-size: 16px;
-		cursor: pointer;
-		border: none;
-		border-radius: 5px;
-		background-color: #305597;
-		color: white;
-	}
-
 	@media (max-width: 768px) {
 		.container {
-			padding: 0 20px;
+			width: 90%;
 		}
-
 		.card {
 			width: 100%;
-		}
-
-		.random {
-			padding: 10px 15px;
 		}
 	}
 </style>

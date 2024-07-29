@@ -1,0 +1,56 @@
+[
+	{
+		"id": "1",
+		"name": "HSK 1",
+		"cards": [
+			{
+				"id": "1",
+				"frontLine1": "Front 1",
+				"frontLine2": "Front 1",
+				"backLine1": "Back 1",
+				"backLine2": "Back 1"
+			},
+			{
+				"id": "2",
+				"frontLine1": "Front 2",
+				"frontLine2": "Front 2",
+				"backLine1": "Back 2",
+				"backLine2": "Back 2"
+			},
+			{
+				"id": "3",
+				"frontLine1": "Front 3",
+				"frontLine2": "Front 3",
+				"backLine1": "Back 3",
+				"backLine2": "Back 3"
+			}
+		]
+	},
+	{
+		"id": "2",
+		"name": "HSK 2",
+		"cards": [
+			{
+				"id": "1",
+				"frontLine1": "Front 1",
+				"frontLine2": "Front 2",
+				"backLine1": "Back 1",
+				"backLine2": "Back 2"
+			},
+			{
+				"id": "2",
+				"frontLine1": "Front 1",
+				"frontLine2": "Front 2",
+				"backLine1": "Back 1",
+				"backLine2": "Back 2"
+			},
+			{
+				"id": "3",
+				"frontLine1": "Front 1",
+				"frontLine2": "Front 2",
+				"backLine1": "Back 1",
+				"backLine2": "Back 2"
+			}
+		]
+	}
+]

@@ -18,10 +18,10 @@
 	<div class={`sidebar ${showSidebar ? 'show' : ''}`}>
 		<button class="close-button" on:click={toggleSidebar}>x</button>
 		<button class="menu-item" on:click={toggleSidebar}>
-			<a href="/cards">Flashcards</a>
+			<a href="/learn">Learn</a>
 		</button>
 		<button class="menu-item" on:click={toggleSidebar}>
-			<a href="/create">Create Your Own Card</a>
+			<a href="/edit">Edit</a>
 		</button>
 	</div>
 
@@ -90,7 +90,7 @@
 	}
 
 	.main-content {
-		width: 100%;
+		padding: 0px 10px;
 	}
 
 	@media (min-width: 768px) {

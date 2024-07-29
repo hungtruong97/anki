@@ -9,7 +9,7 @@
 
 <div class="container">
 	<h1>Welcome to Anki!</h1>
-	<a href="/cards"> Start learning</a>
+	<a href="/learn"> Start learning</a>
 </div>
 
 <style>
