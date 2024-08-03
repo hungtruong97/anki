@@ -1,10 +1,4 @@
 <script>
-	import hsk1 from '../data/hsk1.js';
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		console.log(hsk1[1]);
-	});
 </script>
 
 <div class="container">

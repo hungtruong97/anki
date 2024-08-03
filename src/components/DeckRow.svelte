@@ -1,9 +1,10 @@
 <script>
 	export let deck;
+	export let flow = 'learn';
 </script>
 
 <div class="row">
-	<a class="name" href="/learn/{deck.name}">
+	<a class="name" href="/{flow}/{deck.name}">
 		{deck.name}
 	</a>
 	<div class="quantity">
