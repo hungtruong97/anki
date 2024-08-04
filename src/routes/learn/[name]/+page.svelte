@@ -1,9 +1,10 @@
 <script>
+	import { deckName } from 'src/lib/store.js';
 	import { db, collection, getDocs } from '../../../firebase.js';
 	import { onMount } from 'svelte';
 	import FlashCard from '../../../components/FlashCard.svelte';
 	import Loading from '../../../components/Loading.svelte';
-	export let data;
+	import { flip } from 'svelte/animate';
 	let deck;
 	let card;
 	let isLoading = false;
@@ -30,7 +31,7 @@
 			.then((snapshot) => {
 				// Find the document you want to update
 				const deckToShow = snapshot.docs.find((doc) => {
-					return doc.data().name === data.name; // Find document with matching name
+					return doc.data().name === $deckName; // Find document with matching name
 				});
 
 				if (deckToShow) {
@@ -66,7 +67,12 @@
 		{:else}
 			<h1>{deck.name}</h1>
 			<FlashCard {card} />
-			<button class="button randomButton" on:click={() => loadRandomCard(deck.cards)}>
+			<button
+				class="button randomButton"
+				on:click={() => {
+					loadRandomCard(deck.cards);
+				}}
+			>
 				Random Card</button
 			>
 		{/if}

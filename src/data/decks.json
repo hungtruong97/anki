@@ -1,56 +1,458 @@
 [
 	{
-		"id": "1",
-		"name": "HSK 1",
-		"cards": [
-			{
-				"id": "1",
-				"frontLine1": "Front 1",
-				"frontLine2": "Front 1",
-				"backLine1": "Back 1",
-				"backLine2": "Back 1"
-			},
-			{
-				"id": "2",
-				"frontLine1": "Front 2",
-				"frontLine2": "Front 2",
-				"backLine1": "Back 2",
-				"backLine2": "Back 2"
-			},
-			{
-				"id": "3",
-				"frontLine1": "Front 3",
-				"frontLine2": "Front 3",
-				"backLine1": "Back 3",
-				"backLine2": "Back 3"
-			}
-		]
+		"frontLine1": "你好",
+		"frontLine2": "",
+		"backLine1": "nǐ hǎo",
+		"backLine2": "hello"
 	},
 	{
-		"id": "2",
-		"name": "HSK 2",
-		"cards": [
-			{
-				"id": "1",
-				"frontLine1": "Front 1",
-				"frontLine2": "Front 2",
-				"backLine1": "Back 1",
-				"backLine2": "Back 2"
-			},
-			{
-				"id": "2",
-				"frontLine1": "Front 1",
-				"frontLine2": "Front 2",
-				"backLine1": "Back 1",
-				"backLine2": "Back 2"
-			},
-			{
-				"id": "3",
-				"frontLine1": "Front 1",
-				"frontLine2": "Front 2",
-				"backLine1": "Back 1",
-				"backLine2": "Back 2"
-			}
-		]
+		"frontLine1": "谢谢",
+		"frontLine2": "",
+		"backLine1": "xiè xie",
+		"backLine2": "thank you"
+	},
+	{
+		"frontLine1": "对不起",
+		"frontLine2": "",
+		"backLine1": "duì bù qǐ",
+		"backLine2": "sorry"
+	},
+	{
+		"frontLine1": "请",
+		"frontLine2": "",
+		"backLine1": "qǐng",
+		"backLine2": "please"
+	},
+	{
+		"frontLine1": "再见",
+		"frontLine2": "",
+		"backLine1": "zài jiàn",
+		"backLine2": "goodbye"
+	},
+	{
+		"frontLine1": "是",
+		"frontLine2": "",
+		"backLine1": "shì",
+		"backLine2": "is"
+	},
+	{
+		"frontLine1": "不",
+		"frontLine2": "",
+		"backLine1": "bù",
+		"backLine2": "not"
+	},
+	{
+		"frontLine1": "我",
+		"frontLine2": "",
+		"backLine1": "wǒ",
+		"backLine2": "I, me"
+	},
+	{
+		"frontLine1": "你",
+		"frontLine2": "",
+		"backLine1": "nǐ",
+		"backLine2": "you"
+	},
+	{
+		"frontLine1": "他",
+		"frontLine2": "",
+		"backLine1": "tā",
+		"backLine2": "he, him"
+	},
+	{
+		"frontLine1": "她",
+		"frontLine2": "",
+		"backLine1": "tā",
+		"backLine2": "she, her"
+	},
+	{
+		"frontLine1": "我们",
+		"frontLine2": "",
+		"backLine1": "wǒ men",
+		"backLine2": "we, us"
+	},
+	{
+		"frontLine1": "你们",
+		"frontLine2": "",
+		"backLine1": "nǐ men",
+		"backLine2": "you (plural)"
+	},
+	{
+		"frontLine1": "他们",
+		"frontLine2": "",
+		"backLine1": "tā men",
+		"backLine2": "they (male)"
+	},
+	{
+		"frontLine1": "她们",
+		"frontLine2": "",
+		"backLine1": "tā men",
+		"backLine2": "they (female)"
+	},
+	{
+		"frontLine1": "这",
+		"frontLine2": "",
+		"backLine1": "zhè",
+		"backLine2": "this"
+	},
+	{
+		"frontLine1": "那",
+		"frontLine2": "",
+		"backLine1": "nà",
+		"backLine2": "that"
+	},
+	{
+		"frontLine1": "一",
+		"frontLine2": "",
+		"backLine1": "yī",
+		"backLine2": "one"
+	},
+	{
+		"frontLine1": "二",
+		"frontLine2": "",
+		"backLine1": "èr",
+		"backLine2": "two"
+	},
+	{
+		"frontLine1": "三",
+		"frontLine2": "",
+		"backLine1": "sān",
+		"backLine2": "three"
+	},
+	{
+		"frontLine1": "四",
+		"frontLine2": "",
+		"backLine1": "sì",
+		"backLine2": "four"
+	},
+	{
+		"frontLine1": "五",
+		"frontLine2": "",
+		"backLine1": "wǔ",
+		"backLine2": "five"
+	},
+	{
+		"frontLine1": "六",
+		"frontLine2": "",
+		"backLine1": "liù",
+		"backLine2": "six"
+	},
+	{
+		"frontLine1": "七",
+		"frontLine2": "",
+		"backLine1": "qī",
+		"backLine2": "seven"
+	},
+	{
+		"frontLine1": "八",
+		"frontLine2": "",
+		"backLine1": "bā",
+		"backLine2": "eight"
+	},
+	{
+		"frontLine1": "九",
+		"frontLine2": "",
+		"backLine1": "jiǔ",
+		"backLine2": "nine"
+	},
+	{
+		"frontLine1": "十",
+		"frontLine2": "",
+		"backLine1": "shí",
+		"backLine2": "ten"
+	},
+	{
+		"frontLine1": "百",
+		"frontLine2": "",
+		"backLine1": "bǎi",
+		"backLine2": "hundred"
+	},
+	{
+		"frontLine1": "千",
+		"frontLine2": "",
+		"backLine1": "qiān",
+		"backLine2": "thousand"
+	},
+	{
+		"frontLine1": "万",
+		"frontLine2": "",
+		"backLine1": "wàn",
+		"backLine2": "ten thousand"
+	},
+	{
+		"frontLine1": "大",
+		"frontLine2": "",
+		"backLine1": "dà",
+		"backLine2": "big"
+	},
+	{
+		"frontLine1": "小",
+		"frontLine2": "",
+		"backLine1": "xiǎo",
+		"backLine2": "small"
+	},
+	{
+		"frontLine1": "高",
+		"frontLine2": "",
+		"backLine1": "gāo",
+		"backLine2": "tall"
+	},
+	{
+		"frontLine1": "矮",
+		"frontLine2": "",
+		"backLine1": "ǎi",
+		"backLine2": "short"
+	},
+	{
+		"frontLine1": "长",
+		"frontLine2": "",
+		"backLine1": "cháng",
+		"backLine2": "long"
+	},
+	{
+		"frontLine1": "短",
+		"frontLine2": "",
+		"backLine1": "duǎn",
+		"backLine2": "short"
+	},
+	{
+		"frontLine1": "快",
+		"frontLine2": "",
+		"backLine1": "kuài",
+		"backLine2": "fast"
+	},
+	{
+		"frontLine1": "慢",
+		"frontLine2": "",
+		"backLine1": "màn",
+		"backLine2": "slow"
+	},
+	{
+		"frontLine1": "好",
+		"frontLine2": "",
+		"backLine1": "hǎo",
+		"backLine2": "good"
+	},
+	{
+		"frontLine1": "坏",
+		"frontLine2": "",
+		"backLine1": "huài",
+		"backLine2": "bad"
+	},
+	{
+		"frontLine1": "漂亮",
+		"frontLine2": "",
+		"backLine1": "piào liàng",
+		"backLine2": "beautiful"
+	},
+	{
+		"frontLine1": "丑",
+		"frontLine2": "",
+		"backLine1": "chǒu",
+		"backLine2": "ugly"
+	},
+	{
+		"frontLine1": "聪明",
+		"frontLine2": "",
+		"backLine1": "cōng míng",
+		"backLine2": "smart"
+	},
+	{
+		"frontLine1": "笨",
+		"frontLine2": "",
+		"backLine1": "bèn",
+		"backLine2": "stupid"
+	},
+	{
+		"frontLine1": "年轻",
+		"frontLine2": "",
+		"backLine1": "nián qīng",
+		"backLine2": "young"
+	},
+	{
+		"frontLine1": "老",
+		"frontLine2": "",
+		"backLine1": "lǎo",
+		"backLine2": "old"
+	},
+	{
+		"frontLine1": "新",
+		"frontLine2": "",
+		"backLine1": "xīn",
+		"backLine2": "new"
+	},
+	{
+		"frontLine1": "旧",
+		"frontLine2": "",
+		"backLine1": "jiù",
+		"backLine2": "old"
+	},
+	{
+		"frontLine1": "冷",
+		"frontLine2": "",
+		"backLine1": "lěng",
+		"backLine2": "cold"
+	},
+	{
+		"frontLine1": "热",
+		"frontLine2": "",
+		"backLine1": "rè",
+		"backLine2": "hot"
+	},
+	{
+		"frontLine1": "贵",
+		"frontLine2": "",
+		"backLine1": "guì",
+		"backLine2": "expensive"
+	},
+	{
+		"frontLine1": "便宜",
+		"frontLine2": "",
+		"backLine1": "pián yi",
+		"backLine2": "cheap"
+	},
+	{
+		"frontLine1": "忙",
+		"frontLine2": "",
+		"backLine1": "máng",
+		"backLine2": "busy"
+	},
+	{
+		"frontLine1": "闲",
+		"frontLine2": "",
+		"backLine1": "xián",
+		"backLine2": "free"
+	},
+	{
+		"frontLine1": "多",
+		"frontLine2": "",
+		"backLine1": "duō",
+		"backLine2": "many"
+	},
+	{
+		"frontLine1": "少",
+		"frontLine2": "",
+		"backLine1": "shǎo",
+		"backLine2": "few"
+	},
+	{
+		"frontLine1": "高兴",
+		"frontLine2": "",
+		"backLine1": "gāo xìng",
+		"backLine2": "happy"
+	},
+	{
+		"frontLine1": "伤心",
+		"frontLine2": "",
+		"backLine1": "shāng xīn",
+		"backLine2": "sad"
+	},
+	{
+		"frontLine1": "累",
+		"frontLine2": "",
+		"backLine1": "lèi",
+		"backLine2": "tired"
+	},
+	{
+		"frontLine1": "饿",
+		"frontLine2": "",
+		"backLine1": "è",
+		"backLine2": "hungry"
+	},
+	{
+		"frontLine1": "渴",
+		"frontLine2": "",
+		"backLine1": "kě",
+		"backLine2": "thirsty"
+	},
+	{
+		"frontLine1": "病",
+		"frontLine2": "",
+		"backLine1": "bìng",
+		"backLine2": "sick"
+	},
+	{
+		"frontLine1": "疼",
+		"frontLine2": "",
+		"backLine1": "téng",
+		"backLine2": "painful"
+	},
+	{
+		"frontLine1": "热情",
+		"frontLine2": "",
+		"backLine1": "rè qíng",
+		"backLine2": "enthusiastic"
+	},
+	{
+		"frontLine1": "冷淡",
+		"frontLine2": "",
+		"backLine1": "lěng dàn",
+		"backLine2": "cold"
+	},
+	{
+		"frontLine1": "干净",
+		"frontLine2": "",
+		"backLine1": "gān jìng",
+		"backLine2": "clean"
+	},
+	{
+		"frontLine1": "脏",
+		"frontLine2": "",
+		"backLine1": "zāng",
+		"backLine2": "dirty"
+	},
+	{
+		"frontLine1": "快乐",
+		"frontLine2": "",
+		"backLine1": "kuài lè",
+		"backLine2": "happy"
+	},
+	{
+		"frontLine1": "悲伤",
+		"frontLine2": "",
+		"backLine1": "bēi shāng",
+		"backLine2": "sad"
+	},
+	{
+		"frontLine1": "安静",
+		"frontLine2": "",
+		"backLine1": "ān jìng",
+		"backLine2": "quiet"
+	},
+	{
+		"frontLine1": "吵",
+		"frontLine2": "",
+		"backLine1": "chǎo",
+		"backLine2": "noisy"
+	},
+	{
+		"frontLine1": "快乐",
+		"frontLine2": "",
+		"backLine1": "kuài lè",
+		"backLine2": "happy"
+	},
+	{
+		"frontLine1": "悲伤",
+		"frontLine2": "",
+		"backLine1": "bēi shāng",
+		"backLine2": "sad"
+	},
+	{
+		"frontLine1": "安静",
+		"frontLine2": "",
+		"backLine1": "ān jìng",
+		"backLine2": "quiet"
+	},
+	{
+		"frontLine1": "吵",
+		"frontLine2": "",
+		"backLine1": "chǎo",
+		"backLine2": "noisy"
+	},
+	{
+		"frontLine1": "安静",
+		"frontLine2": "",
+		"backLine1": "ān jìng",
+		"backLine2": "quiet"
 	}
 ]

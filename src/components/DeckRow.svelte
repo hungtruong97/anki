@@ -1,10 +1,17 @@
 <script>
+	import { deckName } from 'src/lib/store.js';
 	export let deck;
 	export let flow = 'learn';
 </script>
 
 <div class="row">
-	<a class="name" href="/{flow}/{deck.name}">
+	<a
+		class="name"
+		href="/{flow}/{deck.name}"
+		on:click={() => {
+			deckName.set(deck.name);
+		}}
+	>
 		{deck.name}
 	</a>
 	<div class="quantity">

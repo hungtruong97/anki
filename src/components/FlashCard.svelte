@@ -5,23 +5,30 @@
 	function flipCard() {
 		flipped = !flipped;
 	}
+
+	$: if (card) {
+		flipped = false;
+	}
 </script>
 
 <div class="container">
 	<button class="card" on:click={flipCard}>
 		<div class="card-inner" style="transform: rotateY({flipped ? 180 : 0}deg);">
-			<div class="card-front">
-				{#if card}
-					<p>{card.frontLine1}</p>
-					<p>{card.frontLine2}</p>
-				{/if}
-			</div>
-			<div class="card-back">
-				{#if card}
-					<p>{card.backLine1}</p>
-					<p>{card.backLine2}</p>
-				{/if}
-			</div>
+			{#if !flipped}
+				<div class="card-front">
+					{#if card}
+						<p>{card.frontLine1}</p>
+						<p>{card.frontLine2}</p>
+					{/if}
+				</div>
+			{:else}
+				<div class="card-back">
+					{#if card}
+						<p>{card.backLine1}</p>
+						<p>{card.backLine2}</p>
+					{/if}
+				</div>
+			{/if}
 		</div>
 	</button>
 </div>
@@ -69,10 +76,12 @@
 		border-radius: 10px;
 		background-color: #ffffff;
 		color: black;
+		border: 5px solid #007bff;
 	}
 
 	.card-back {
 		transform: rotateY(180deg);
+		background-color: #e7e7f6;
 	}
 
 	@media (max-width: 768px) {

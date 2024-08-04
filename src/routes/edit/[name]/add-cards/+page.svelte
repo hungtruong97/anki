@@ -1,12 +1,16 @@
 <script>
+	import { deckName } from 'src/lib/store';
 	import Button from 'src/components/Button.svelte';
 	import { db, collection, getDocs, addDoc } from 'src/firebase';
-	let deckName = 'HSK 1';
+	import { goto } from '$app/navigation';
 	let deck;
 	let frontLine1 = '';
 	let frontLine2 = '';
 	let backLine1 = '';
 	let backLine2 = '';
+	let isMessageShown = false;
+	let isError = false;
+	let message = 'Document added successfully!';
 
 	const handleSubmit = () => {
 		const decksCollectionRef = collection(db, 'decks');
@@ -14,7 +18,7 @@
 			.then(async (snapshot) => {
 				// Find the document you want to update
 				const deckToShow = snapshot.docs.find((doc) => {
-					return doc.data().name === deckName; // Find document with matching name
+					return doc.data().name === $deckName; // Find document with matching name
 				});
 
 				if (deckToShow) {
@@ -28,7 +32,11 @@
 							backLine2
 						});
 						console.log('Document added');
+						isMessageShown = true;
 					} catch (error) {
+						isMessageShown = false;
+						isError = true;
+						message = 'Error adding document';
 						console.log('Error adding document: ', error);
 					}
 				} else {
@@ -38,6 +46,16 @@
 			.catch((error) => {
 				console.error('Error getting documents: ', error);
 			});
+	};
+
+	const handleAddNewCard = () => {
+		isMessageShown = false;
+		isError = false;
+		frontLine1 = '';
+		frontLine2 = '';
+		backLine1 = '';
+		backLine2 = '';
+		goto(`/edit/${deckName}/add-cards`);
 	};
 </script>
 
@@ -61,7 +79,16 @@
 			<input type="text" bind:value={backLine2} />
 		</label>
 	</form>
-	<Button text="Add Card" handleClick={handleSubmit}></Button>
+	{#if isMessageShown}
+		{#if isError}
+			<div class="error">{message}</div>
+		{:else}
+			<div class="message">{message}</div>
+		{/if}
+		<Button text="Add Another Card" handleClick={handleAddNewCard}></Button>
+	{:else}
+		<Button text="Add Card" handleClick={handleSubmit}></Button>
+	{/if}
 </div>
 
 <style>
@@ -80,5 +107,13 @@
 		justify-content: center;
 		align-items: flex-start;
 		gap: 15px;
+	}
+
+	.error {
+		color: red;
+	}
+
+	.message {
+		color: green;
 	}
 </style>
