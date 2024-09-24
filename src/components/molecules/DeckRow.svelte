@@ -1,5 +1,5 @@
 <script>
-	import { deckName } from 'src/lib/store.js';
+	import { selectedDeckName } from 'src/lib/store.js';
 	export let deck;
 	export let flow = 'learn';
 </script>
@@ -9,7 +9,7 @@
 		class="name"
 		href="/{flow}/{deck.name}"
 		on:click={() => {
-			deckName.set(deck.name);
+			selectedDeckName.set(deck.name);
 		}}
 	>
 		{deck.name}

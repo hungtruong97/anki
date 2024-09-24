@@ -1,0 +1,30 @@
+:root {
+	--primary: #e6c0e9;
+	--sidebar: #fcffeb;
+	--secondary: #8db580;
+	--tertiary: #77b6ea;
+	--danger: #f25151;
+	--text-color: #434343;
+	--text-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	all: unset;
+}
+
+button {
+	all: unset;
+}

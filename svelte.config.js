@@ -10,8 +10,17 @@ const config = {
 
 		alias: {
 			src: '/src',
-			'src/*': 'src/*'
-		}
+			'src/*': 'src/*',
+			static: '/static',
+			'static/*': 'static/*'
+		},
+		adapter: adapter({
+			pages: '.svelte-kit/output',
+			assets: '.svelte-kit/output',
+			fallback: 'index.html',
+			precompress: true,
+			strict: true
+		})
 	}
 };
 

@@ -1,24 +1,35 @@
 <script>
 	import { db, collection, getDocs } from '../../firebase.js';
 	import { onMount } from 'svelte';
-	import DeckRow from '../../components/DeckRow.svelte';
-	import Loading from '../../components/Loading.svelte';
+	import Loading from '../../components/atoms/Loading.svelte';
+	import DeckCard from '../../components/molecules/DeckCard.svelte';
+	import Text from '../../components/atoms/Text.svelte';
+	import HorizontalMargin from '../../components/atoms/HorizontalMargin.svelte';
+	import Button from '../../components/atoms/Button.svelte';
+	import { deckStore } from 'src/lib/store.js';
 	let decks;
-	let isLoading = false;
+	let isLoading;
 
 	onMount(async () => {
 		isLoading = true;
-		const decksCollectionRef = collection(db, 'decks');
-		const deckDocs = await getDocs(decksCollectionRef);
-		decks = await Promise.all(
-			deckDocs.docs.map(async (doc) => {
-				const deckData = doc.data();
-				const cardsCollectionRef = collection(doc.ref, 'cards');
-				const cardsSnapshot = await getDocs(cardsCollectionRef);
-				return { ...deckData, size: cardsSnapshot.size };
-			})
-		);
-		isLoading = false;
+		if ($deckStore.length !== 0) {
+			decks = $deckStore;
+			isLoading = false;
+			console.log(decks);
+		} else {
+			const decksCollectionRef = collection(db, 'decks');
+			const deckDocs = await getDocs(decksCollectionRef);
+			decks = await Promise.all(
+				deckDocs.docs.map(async (doc) => {
+					const deckData = doc.data();
+					const cardsCollectionRef = collection(doc.ref, 'cards');
+					const cardsSnapshot = await getDocs(cardsCollectionRef);
+					return { ...deckData, size: cardsSnapshot.size };
+				})
+			);
+			deckStore.set(decks);
+			isLoading = false;
+		}
 	});
 </script>
 
@@ -26,28 +37,30 @@
 	<Loading />
 {:else}
 	<div class="container">
+		<HorizontalMargin type="large" />
+
 		{#if !decks}
-			<h2>No decks found</h2>
-			<button class="button">
-				<a href="/create-deck">Create a deck</a>
-			</button>
+			<Text type="subtitle" text="You have no decks" />
+			<HorizontalMargin type="medium" />
+			<Button type="primary" label="Create a new deck" destination="/create" />
 		{:else}
-			<h2>Decks</h2>
-			{#each decks as deck}
-				<DeckRow {deck} />
-			{/each}
+			<Text type="subtitle" text="What do you want to learn today?" />
+			<HorizontalMargin type="medium" />
+			<div class="deck-list">
+				{#each decks as deck}
+					<DeckCard type="deck" title={deck.name} numberOfCards={deck.size} />
+				{/each}
+			</div>
 		{/if}
 	</div>
 {/if}
 
 <style>
-	.button {
-		padding: 10px 20px;
-		font-size: 16px;
-		cursor: pointer;
-		border: none;
-		border-radius: 5px;
-		background-color: #305597;
-		color: white;
+	.deck-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 24px;
 	}
 </style>

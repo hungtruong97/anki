@@ -1,5 +1,5 @@
 <script>
-	import { deckName } from 'src/lib/store';
+	import { selectedDeckName } from 'src/lib/store';
 	import Button from 'src/components/Button.svelte';
 	import { db, collection, getDocs, addDoc } from 'src/firebase';
 	import { goto } from '$app/navigation';
@@ -18,7 +18,7 @@
 			.then(async (snapshot) => {
 				// Find the document you want to update
 				const deckToShow = snapshot.docs.find((doc) => {
-					return doc.data().name === $deckName; // Find document with matching name
+					return doc.data().name === $selectedDeckName; // Find document with matching name
 				});
 
 				if (deckToShow) {
@@ -55,7 +55,7 @@
 		frontLine2 = '';
 		backLine1 = '';
 		backLine2 = '';
-		goto(`/edit/${deckName}/add-cards`);
+		goto(`/edit/${selectedDeckName}/add-cards`);
 	};
 </script>
 

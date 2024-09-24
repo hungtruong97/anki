@@ -1,9 +1,13 @@
 <script>
+	import Text from '../components/atoms/Text.svelte';
+	import Button from '../components/atoms/Button.svelte';
+	import HorizontalMargin from '../components/atoms/HorizontalMargin.svelte';
 </script>
 
 <div class="container">
-	<h1>Welcome to Anki!</h1>
-	<a href="/learn"> Start learning</a>
+	<Text type="title" text="Welcome to Anki!" />
+	<HorizontalMargin type="medium" />
+	<Button label="Get Started" destination="/learn" />
 </div>
 
 <style>
@@ -12,28 +16,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-		height: 100vh;
-	}
-
-	h1 {
-		margin-bottom: 20px;
-	}
-
-	a {
-		text-decoration: none;
-		color: white;
-		padding: 10px 20px;
-		border: none;
-		border-radius: 5px;
-		background-color: #007bff;
-		color: white;
-		cursor: pointer;
-	}
-
-	@media (max-width: 768px) {
-		.container {
-			padding: 0 20px;
-		}
+		width: 100%;
+		height: 100%;
+		flex: 1;
 	}
 </style>

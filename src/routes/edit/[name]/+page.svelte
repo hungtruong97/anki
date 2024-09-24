@@ -1,5 +1,5 @@
 <script>
-	import { deckName } from 'src/lib/store.js';
+	import { selectedDeckName } from 'src/lib/store.js';
 	import { db, collection, getDocs } from '../../../firebase.js';
 	import { onMount } from 'svelte';
 	import Loading from '../../../components/Loading.svelte';
@@ -8,13 +8,13 @@
 	let isLoading = false;
 
 	onMount(() => {
-		console.log(deckName);
+		console.log(selectedDeckName);
 		isLoading = true;
 		const decksCollectionRef = collection(db, 'decks');
 		getDocs(decksCollectionRef)
 			.then((snapshot) => {
 				// Find the document you want to update
-				const deckToShow = snapshot.docs.find((doc) => doc.data().name === $deckName);
+				const deckToShow = snapshot.docs.find((doc) => doc.data().name === $selectedDeckName);
 
 				isLoading = false;
 				deck = deckToShow.data();
