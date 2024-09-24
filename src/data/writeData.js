@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 let decks;
-let deckData;
 
 async function fetchDecks() {
 	const decksCollectionRef = collection(db, 'decks');
@@ -16,10 +15,10 @@ fetchDecks().then(async () => {
 	let batch = writeBatch(db);
 	const __filename = fileURLToPath(import.meta.url);
 	const __dirname = dirname(__filename);
-	const data = JSON.parse(fs.readFileSync(`${__dirname}/idiom.json`, 'utf8'));
+	const data = JSON.parse(fs.readFileSync(`${__dirname}/ielts-vocab.json`, 'utf8'));
 
 	decks.forEach((deck) => {
-		if (deck.name === 'English idioms') {
+		if (deck.name === 'Ielts Vocabulary') {
 			// Loop over each item in the data
 			for (const item of data) {
 				// Get a reference to the document

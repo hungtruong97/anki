@@ -98,11 +98,13 @@
 						return doc.data().name === $selectedDeckName; // Find document with matching name
 					});
 
+					// If the deck exists, get the cards
 					if (deckToShow) {
 						deck = deckToShow.data();
 						const cardsDocRef = collection(db, 'decks', deckToShow.id, 'cards');
 						getDocs(cardsDocRef)
 							.then((snapshot) => {
+								// Set the count to 0
 								cards = snapshot.docs.map((doc) => ({ ...doc.data(), count: 0 }));
 								card = loadRandomCard();
 								isLoading = false;
@@ -118,6 +120,7 @@
 		}
 	});
 
+	// Save the cards to the deck store when the component is destroyed
 	onDestroy(() => {
 		const deckIndex = $deckStore.findIndex((d) => d.name === deck.name);
 		if (deckIndex !== -1) {

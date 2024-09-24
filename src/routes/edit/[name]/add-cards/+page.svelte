@@ -1,6 +1,6 @@
 <script>
 	import { selectedDeckName } from 'src/lib/store';
-	import Button from 'src/components/Button.svelte';
+	import Button from 'src/components/atoms/Button.svelte';
 	import { db, collection, getDocs, addDoc } from 'src/firebase';
 	import { goto } from '$app/navigation';
 	let deck;

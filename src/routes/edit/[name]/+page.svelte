@@ -2,8 +2,8 @@
 	import { selectedDeckName } from 'src/lib/store.js';
 	import { db, collection, getDocs } from '../../../firebase.js';
 	import { onMount } from 'svelte';
-	import Loading from '../../../components/Loading.svelte';
-	import Button from '../../../components/Button.svelte';
+	import Loading from '../../../components/atoms/Loading.svelte';
+	import Button from '../../../components/atoms/Button.svelte';
 	let deck;
 	let isLoading = false;
 

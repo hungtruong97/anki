@@ -1,8 +1,8 @@
 <script>
 	import { db, collection, getDocs } from '../../firebase';
 	import { onMount } from 'svelte';
-	import DeckRow from '../../components/DeckRow.svelte';
-	import Loading from '../../components/Loading.svelte';
+	import DeckRow from '../../components/molecules/DeckRow.svelte';
+	import Loading from '../../components/atoms/Loading.svelte';
 	let decks;
 	let isLoading = false;
 
